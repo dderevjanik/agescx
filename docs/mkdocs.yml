@@ -1,0 +1,42 @@
+site_name: AgeScx
+site_author: Daniel Derevjanik
+site_description: Project documentation
+site_favicon: favicon.ico
+site_url: http://dderevjanik.github.io/agescx/
+repo_url: https://github.com/dderevjanik/agescx
+docs_dir: .
+pages:
+- Home: 'index.md'
+- Installation: 'installation.md'
+- Getting Started:
+    - 'Adding new unit': 'gettingstarted/adding-unit.md'
+    - 'Changing map': 'gettingstarted/changing-map.md'
+- Scenario:
+    - 'Basic': 'scenario/basic.md '
+    - 'Players': 'scenario/players.md '
+    - '--Player': 'scenario/player.md '
+    - '----Resource': 'scenario/resource.md '
+    - '----AI': 'scenario/ai.md '
+    - 'Tiles': 'scenario/tiles.md '
+    - '--Tile': 'scenario/tile.md '
+    - 'Units': 'scenario/units.md '
+    - '--Unit': 'scenario/unit.md '
+    - 'Triggers': 'scenario/triggers.md '
+    - '--Trigger': 'scenario/trigger.md '
+    - '--Effect': 'scenario/effect.md '
+    - '--Condition': 'scenario/condition.md '
+    - 'Messages': 'scenario/messages.md '
+- Enums:
+    - 'AI Types': 'enums/aitypes.md'
+    - 'Civilizations': 'enums/civilizations.md'
+    - 'Player Colors': 'enums/colors.md'
+    - 'Groups': 'enums/groups.md'
+    - 'Resources': 'enums/resources.md'
+    - 'Sounds': 'enums/sounds.md'
+    - 'Techs': 'enums/techs.md'
+    - 'Terrain': 'enums/terrains.md'
+    - 'Units': 'enums/units.md'
+- Formats:
+    - 'Scenario .SCX': 'formatscx.md'
+theme: cosmo
+extra_css: [responsive.css]

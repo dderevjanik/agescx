@@ -1,0 +1,2477 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Daniel Derevjanik">
+        
+        <link rel="shortcut icon" href="../../favicon.ico">
+        
+
+	<title>Techs - AgeScx</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link href="../../responsive.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">AgeScx</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../installation/">Installation</a>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Getting Started <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../gettingstarted/adding-unit/">Adding new unit</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../gettingstarted/changing-map/">Changing map</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Scenario <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../scenario/basic/">Basic</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../scenario/players/">Players</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../scenario/player/">--Player</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../scenario/resource/">----Resource</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../scenario/ai/">----AI</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../scenario/tiles/">Tiles</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../scenario/tile/">--Tile</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../scenario/units/">Units</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../scenario/unit/">--Unit</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../scenario/triggers/">Triggers</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../scenario/trigger/">--Trigger</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../scenario/effect/">--Effect</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../scenario/condition/">--Condition</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../scenario/messages/">Messages</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Enums <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../aitypes/">AI Types</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../civilizations/">Civilizations</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../colors/">Player Colors</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../groups/">Groups</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../resources/">Resources</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../sounds/">Sounds</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="./">Techs</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../terrains/">Terrain</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../units/">Units</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Formats <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../formatscx/">Scenario .SCX</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a rel="next" href="../sounds/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../terrains/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/dderevjanik/AgeScx">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#techs-list">Techs List</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="techs-list">Techs List</h1>
+<p><a href="../../files/list_techs.csv">Download list_techs.csv</a></p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>New Research 0 (U)(GAI)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Tarkan (A)(HUN)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Elite Tarkan (HUN)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Yeomen (BRI)"</td>
+</tr>
+<tr>
+<td>4</td>
+<td>El Dorado (MAY)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Furor Celtica (CEL)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Drill (MON)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Mahouts (PER)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Town Watch</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Zealotry (SAR)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Artillery (TUR)</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Crenellations (TEU)</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Crop Rotation</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Heavy Plow</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Horse Collar</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Guilds</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Anarchy (GOT)</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Banking</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Barracks Huskarl (GOT)</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Cartography</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Currency (U)</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Atheism (HUN)</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Loom</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Coinage</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Garland Wars (AZT)</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Stable (A)</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Plumed Archer (A)(MAY)</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Elited Plumed Archer (MAY)</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Compass (U)</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Atonement +5 Monk HP (AZT)</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Sanctity +5 Monk HP (AZT)</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Fervor +5 Monk HP (AZT)</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Redemption +5 Monk HP (AZT)</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Faith +5 Monk HP (AZT)</td>
+</tr>
+<tr>
+<td>34</td>
+<td>War Galley</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Galleon</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Illumination +5 Monk HP (AZT)</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Cannon Galleon</td>
+</tr>
+<tr>
+<td>38</td>
+<td>Block Printing +5 Monk HP (AZT)</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Husbandry</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Heresy +5 Monk HP (AZT)</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Theocracy +5 Monk HP (AZT)</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Infantry +1 attack (U)(AZT)</td>
+</tr>
+<tr>
+<td>43</td>
+<td>Infantry +2 attack (U)(AZT)</td>
+</tr>
+<tr>
+<td>44</td>
+<td>Infantry +3 attack (U)(AZT)</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Faith</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Block printing (U)</td>
+</tr>
+<tr>
+<td>47</td>
+<td>Chemistry</td>
+</tr>
+<tr>
+<td>48</td>
+<td>Caravan</td>
+</tr>
+<tr>
+<td>49</td>
+<td>Berserkergang (VIK)</td>
+</tr>
+<tr>
+<td>50</td>
+<td>Masonry</td>
+</tr>
+<tr>
+<td>51</td>
+<td>Architecture</td>
+</tr>
+<tr>
+<td>52</td>
+<td>Rocketry (CHI)</td>
+</tr>
+<tr>
+<td>53</td>
+<td>Archers -20% Cost (MAY)</td>
+</tr>
+<tr>
+<td>54</td>
+<td>Treadmill Crane</td>
+</tr>
+<tr>
+<td>55</td>
+<td>Gold Mining</td>
+</tr>
+<tr>
+<td>56</td>
+<td>Archers -30% Cost (MAY)</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Spanish Cannon Galleon (U)</td>
+</tr>
+<tr>
+<td>58</td>
+<td>Conquistador (A)(SPA)</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Kataparuto (JAP)</td>
+</tr>
+<tr>
+<td>60</td>
+<td>Elite Conquistador (SPA)</td>
+</tr>
+<tr>
+<td>61</td>
+<td>Logistica (BYZ)</td>
+</tr>
+<tr>
+<td>62</td>
+<td>Upgrade Castle to Fortress (U)(GAI)</td>
+</tr>
+<tr>
+<td>63</td>
+<td>Keep</td>
+</tr>
+<tr>
+<td>64</td>
+<td>Bombard Tower</td>
+</tr>
+<tr>
+<td>65</td>
+<td>Gillnets</td>
+</tr>
+<tr>
+<td>66</td>
+<td>New Research 66 (U)(GAI)</td>
+</tr>
+<tr>
+<td>67</td>
+<td>Forging</td>
+</tr>
+<tr>
+<td>68</td>
+<td>Iron Casting</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Villagers +30 AP vs Animals (MAG)</td>
+</tr>
+<tr>
+<td>70</td>
+<td>Start with eagle (U)(INC)</td>
+</tr>
+<tr>
+<td>71</td>
+<td>Stone Wall / Gate x2 HP</td>
+</tr>
+<tr>
+<td>72</td>
+<td>Fortified Wall / Gate x2 HP (U)</td>
+</tr>
+<tr>
+<td>73</td>
+<td>Inf, 2H Swordsman, Pikeman, Spearman +1 MA (U)(GAI)</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Scale Mail Armor</td>
+</tr>
+<tr>
+<td>75</td>
+<td>Blast Furnace</td>
+</tr>
+<tr>
+<td>76</td>
+<td>Chain Mail Armor</td>
+</tr>
+<tr>
+<td>77</td>
+<td>Plate Mail Armor</td>
+</tr>
+<tr>
+<td>78</td>
+<td>New Research 78 (U)(GAI)</td>
+</tr>
+<tr>
+<td>79</td>
+<td>Cavalry, Cav Archers +1/+1 Armor (U)(GAI)</td>
+</tr>
+<tr>
+<td>80</td>
+<td>Plate Barding Armor</td>
+</tr>
+<tr>
+<td>81</td>
+<td>Scale Barding Armor</td>
+</tr>
+<tr>
+<td>82</td>
+<td>Chain Barding Armor</td>
+</tr>
+<tr>
+<td>83</td>
+<td>Bearded Axe (FRA)</td>
+</tr>
+<tr>
+<td>84</td>
+<td>Missionary (A)(SPA)</td>
+</tr>
+<tr>
+<td>85</td>
+<td>Hand Cannoneer (A)</td>
+</tr>
+<tr>
+<td>86</td>
+<td>Allow Formations (U)(GAI)</td>
+</tr>
+<tr>
+<td>87</td>
+<td>Spearman (A)</td>
+</tr>
+<tr>
+<td>88</td>
+<td>New Research 88 (U)(GAI)</td>
+</tr>
+<tr>
+<td>89</td>
+<td>Siege Weapons +20% AP vs Buildings (U)(GAI)</td>
+</tr>
+<tr>
+<td>90</td>
+<td>Tracking</td>
+</tr>
+<tr>
+<td>91</td>
+<td>New Research 91 (U)(GAI)</td>
+</tr>
+<tr>
+<td>92</td>
+<td>New Research 92 (U)(GAI)</td>
+</tr>
+<tr>
+<td>93</td>
+<td>Ballistics</td>
+</tr>
+<tr>
+<td>94</td>
+<td>Scorpion (A)</td>
+</tr>
+<tr>
+<td>95</td>
+<td>Free Hussar (U)(TUR)</td>
+</tr>
+<tr>
+<td>96</td>
+<td>Capped Ram</td>
+</tr>
+<tr>
+<td>97</td>
+<td>New Research 97 (U)(GAI)</td>
+</tr>
+<tr>
+<td>98</td>
+<td>Elite Skirmisher</td>
+</tr>
+<tr>
+<td>99</td>
+<td>Skirmisher (A)</td>
+</tr>
+<tr>
+<td>100</td>
+<td>Crossbowman</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Feudal Age</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Castle Age</td>
+</tr>
+<tr>
+<td>103</td>
+<td>Imperial Age</td>
+</tr>
+<tr>
+<td>104</td>
+<td>Dark Age</td>
+</tr>
+<tr>
+<td>105</td>
+<td>New Research 105 (U)(GAI)</td>
+</tr>
+<tr>
+<td>106</td>
+<td>Shadow Blacksmith Age 1 (U)</td>
+</tr>
+<tr>
+<td>107</td>
+<td>Shadow Monastery Age 1 (U)</td>
+</tr>
+<tr>
+<td>108</td>
+<td>Shadow Dock Age 1 (U)</td>
+</tr>
+<tr>
+<td>109</td>
+<td>Shadow Farm Age 1 (U)</td>
+</tr>
+<tr>
+<td>110</td>
+<td>Shadow Mill Age 1 (U)</td>
+</tr>
+<tr>
+<td>111</td>
+<td>Camelry (H)</td>
+</tr>
+<tr>
+<td>112</td>
+<td>Fishing Ship (U)</td>
+</tr>
+<tr>
+<td>113</td>
+<td>New Research 113 (U)(GAI)</td>
+</tr>
+<tr>
+<td>114</td>
+<td>Spearman (U)</td>
+</tr>
+<tr>
+<td>115</td>
+<td>New Research 115 (U)(GAI)</td>
+</tr>
+<tr>
+<td>116</td>
+<td>Villager (U)</td>
+</tr>
+<tr>
+<td>117</td>
+<td>Palisade Wall (U)</td>
+</tr>
+<tr>
+<td>118</td>
+<td>Shadow Town Center Age 1 (U)</td>
+</tr>
+<tr>
+<td>119</td>
+<td>New Research 119 (U)(GAI)</td>
+</tr>
+<tr>
+<td>120</td>
+<td>Shadow Node Age 2 (U)</td>
+</tr>
+<tr>
+<td>121</td>
+<td>New Research 121 (U)(GAI)</td>
+</tr>
+<tr>
+<td>122</td>
+<td>Shadow Barracks Age 2 (U)</td>
+</tr>
+<tr>
+<td>123</td>
+<td>Shadow Blacksmith Age 2 (U)</td>
+</tr>
+<tr>
+<td>124</td>
+<td>Shadow Monastery Age 2 (U)</td>
+</tr>
+<tr>
+<td>125</td>
+<td>Shadow Dock Age 2 (U)</td>
+</tr>
+<tr>
+<td>126</td>
+<td>Shadow Farm Age 2 (U)</td>
+</tr>
+<tr>
+<td>127</td>
+<td>Watch Tower (A)</td>
+</tr>
+<tr>
+<td>128</td>
+<td>Shadow Market Age 2 (U)</td>
+</tr>
+<tr>
+<td>129</td>
+<td>Shadow Mill Age 2 (U)</td>
+</tr>
+<tr>
+<td>130</td>
+<td>Shadow Stable Age 2 (U)</td>
+</tr>
+<tr>
+<td>131</td>
+<td>Shadow Trade WorkShop Age 2 (U)</td>
+</tr>
+<tr>
+<td>132</td>
+<td>Shadow Archery Range Age 2 (U)</td>
+</tr>
+<tr>
+<td>133</td>
+<td>Upgrade Palisade Wall to Stone Wall (U)</td>
+</tr>
+<tr>
+<td>134</td>
+<td>Upgrade Barracks to Archery Range (U)</td>
+</tr>
+<tr>
+<td>135</td>
+<td>Shadow Node Age 3 (U)</td>
+</tr>
+<tr>
+<td>136</td>
+<td>Castle (U)(GAI)</td>
+</tr>
+<tr>
+<td>137</td>
+<td>Castle (A)</td>
+</tr>
+<tr>
+<td>138</td>
+<td>Shadow Siege Workshop Age 3 (U)</td>
+</tr>
+<tr>
+<td>139</td>
+<td>Fortified Wall (U)(GAI)</td>
+</tr>
+<tr>
+<td>140</td>
+<td>Guard Tower</td>
+</tr>
+<tr>
+<td>141</td>
+<td>Castles +10 MA, +20% HP, +2 Armor (U)(GAI)</td>
+</tr>
+<tr>
+<td>142</td>
+<td>Shadow Node Age 4 (U)</td>
+</tr>
+<tr>
+<td>143</td>
+<td>Shadow Tower Age 4 (U)</td>
+</tr>
+<tr>
+<td>144</td>
+<td>Wonder (A)</td>
+</tr>
+<tr>
+<td>145</td>
+<td>New Research 145 (U)(GAI)</td>
+</tr>
+<tr>
+<td>146</td>
+<td>Shadow University Age 3 (U)</td>
+</tr>
+<tr>
+<td>147</td>
+<td>Archery Range (A)</td>
+</tr>
+<tr>
+<td>148</td>
+<td>Market (A)</td>
+</tr>
+<tr>
+<td>149</td>
+<td>Siege Workshop (A)</td>
+</tr>
+<tr>
+<td>150</td>
+<td>University (A)</td>
+</tr>
+<tr>
+<td>151</td>
+<td>Archer (A)</td>
+</tr>
+<tr>
+<td>152</td>
+<td>Cavalry Archer (U)(GAI)</td>
+</tr>
+<tr>
+<td>153</td>
+<td>Trade Cog (U)(GAI)</td>
+</tr>
+<tr>
+<td>154</td>
+<td>Skirmisher (U)(GAI)</td>
+</tr>
+<tr>
+<td>155</td>
+<td>War Galley (U)(GAI)</td>
+</tr>
+<tr>
+<td>156</td>
+<td>Light Camel (U)</td>
+</tr>
+<tr>
+<td>157</td>
+<td>Monk (A)</td>
+</tr>
+<tr>
+<td>158</td>
+<td>Spearman (U)</td>
+</tr>
+<tr>
+<td>159</td>
+<td>Bandit (U)(GAI)</td>
+</tr>
+<tr>
+<td>160</td>
+<td>Man-At-Arms (U)</td>
+</tr>
+<tr>
+<td>161</td>
+<td>Trade Cart (A)</td>
+</tr>
+<tr>
+<td>162</td>
+<td>Battering Ram (A)</td>
+</tr>
+<tr>
+<td>163</td>
+<td>Crossbowman (U)(GAI)</td>
+</tr>
+<tr>
+<td>164</td>
+<td>Elite Skirmisher (U)(GAI)</td>
+</tr>
+<tr>
+<td>165</td>
+<td>Heavy Swordsman (U)(GAI)</td>
+</tr>
+<tr>
+<td>166</td>
+<td>Knight (A)</td>
+</tr>
+<tr>
+<td>167</td>
+<td>Mangonel (U)(GAI)</td>
+</tr>
+<tr>
+<td>168</td>
+<td>OMTBO (U)(GAI)</td>
+</tr>
+<tr>
+<td>169</td>
+<td>Scorpion (U)(GAI)</td>
+</tr>
+<tr>
+<td>170</td>
+<td>Galleon (U)(GAI)</td>
+</tr>
+<tr>
+<td>171</td>
+<td>Capped Ram (U)(GAI)</td>
+</tr>
+<tr>
+<td>172</td>
+<td>Bombard Cannon (U)</td>
+</tr>
+<tr>
+<td>173</td>
+<td>Cannon Galleon (U)(GAI)</td>
+</tr>
+<tr>
+<td>174</td>
+<td>Hand Cannoner (U)</td>
+</tr>
+<tr>
+<td>175</td>
+<td>Cavalier (U)</td>
+</tr>
+<tr>
+<td>176</td>
+<td>PMANG (U)(GAI)</td>
+</tr>
+<tr>
+<td>177</td>
+<td>Trade Boats Carry +50% (U)(GAI)</td>
+</tr>
+<tr>
+<td>178</td>
+<td>All Ages (U)</td>
+</tr>
+<tr>
+<td>179</td>
+<td>New Research 179 (U)(GAI)</td>
+</tr>
+<tr>
+<td>180</td>
+<td>Trade Cog (A)</td>
+</tr>
+<tr>
+<td>181</td>
+<td>New Research 181 (U)(GAI)</td>
+</tr>
+<tr>
+<td>182</td>
+<td>Gold Shaft Mining</td>
+</tr>
+<tr>
+<td>183</td>
+<td>New Research 183 (U)(GAI)</td>
+</tr>
+<tr>
+<td>184</td>
+<td>Port (U)(GAI)</td>
+</tr>
+<tr>
+<td>185</td>
+<td>Cathedral (U)(GAI)</td>
+</tr>
+<tr>
+<td>186</td>
+<td>Long Swordsman (H)</td>
+</tr>
+<tr>
+<td>187</td>
+<td>Town Center (A)</td>
+</tr>
+<tr>
+<td>188</td>
+<td>Bombard Cannon (A)</td>
+</tr>
+<tr>
+<td>189</td>
+<td>Stone Wall / Gate (A)</td>
+</tr>
+<tr>
+<td>190</td>
+<td>New Research 190 (U)(GAI)</td>
+</tr>
+<tr>
+<td>191</td>
+<td>New Research 191 (U)(GAI)</td>
+</tr>
+<tr>
+<td>192</td>
+<td>Cavalry Archer (A)</td>
+</tr>
+<tr>
+<td>193</td>
+<td>New Research 193 (U)(GAI)</td>
+</tr>
+<tr>
+<td>194</td>
+<td>Fortified Walls</td>
+</tr>
+<tr>
+<td>195</td>
+<td>New Research 195 (U)(GAI)</td>
+</tr>
+<tr>
+<td>196</td>
+<td>New Research 196 (U)(GAI)</td>
+</tr>
+<tr>
+<td>197</td>
+<td>Pikeman</td>
+</tr>
+<tr>
+<td>198</td>
+<td>New Research 198 (U)(GAI)</td>
+</tr>
+<tr>
+<td>199</td>
+<td>Fletching</td>
+</tr>
+<tr>
+<td>200</td>
+<td>Bodkin Arrow</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Bracer</td>
+</tr>
+<tr>
+<td>202</td>
+<td>Double-Bit Axe</td>
+</tr>
+<tr>
+<td>203</td>
+<td>Bow Saw</td>
+</tr>
+<tr>
+<td>204</td>
+<td>Scout Cavalry (A)</td>
+</tr>
+<tr>
+<td>205</td>
+<td>New Research 205 (U)(GAI)</td>
+</tr>
+<tr>
+<td>206</td>
+<td>New Research 206 (U)(GAI)</td>
+</tr>
+<tr>
+<td>207</td>
+<td>Long Swordsman</td>
+</tr>
+<tr>
+<td>208</td>
+<td>New Research 208 (U)(GAI)</td>
+</tr>
+<tr>
+<td>209</td>
+<td>Cavalier</td>
+</tr>
+<tr>
+<td>210</td>
+<td>Monastery (A)</td>
+</tr>
+<tr>
+<td>211</td>
+<td>Padded Archer Armor</td>
+</tr>
+<tr>
+<td>212</td>
+<td>Leather Archer Armor</td>
+</tr>
+<tr>
+<td>213</td>
+<td>Wheel Barrow</td>
+</tr>
+<tr>
+<td>214</td>
+<td>New Research 214 (U)(GAI)</td>
+</tr>
+<tr>
+<td>215</td>
+<td>Squires</td>
+</tr>
+<tr>
+<td>216</td>
+<td>Farm (A)</td>
+</tr>
+<tr>
+<td>217</td>
+<td>Two-Handed Swordsman</td>
+</tr>
+<tr>
+<td>218</td>
+<td>Heavy Cavalry Archer</td>
+</tr>
+<tr>
+<td>219</td>
+<td>Ring Archer Armor</td>
+</tr>
+<tr>
+<td>220</td>
+<td>Barracks (A)</td>
+</tr>
+<tr>
+<td>221</td>
+<td>Two-Man Saw</td>
+</tr>
+<tr>
+<td>222</td>
+<td>Man-at-Arms</td>
+</tr>
+<tr>
+<td>223</td>
+<td>New Research 223 (U)(GAI)</td>
+</tr>
+<tr>
+<td>224</td>
+<td>New Research 224 (U)(GAI)</td>
+</tr>
+<tr>
+<td>225</td>
+<td>New Research 225 (U)(GAI)</td>
+</tr>
+<tr>
+<td>226</td>
+<td>New Research 226 (U)(GAI)</td>
+</tr>
+<tr>
+<td>227</td>
+<td>New Research 227 (U)(GAI)</td>
+</tr>
+<tr>
+<td>228</td>
+<td>New Research 228 (U)(GAI)</td>
+</tr>
+<tr>
+<td>229</td>
+<td>New Research 229 (U)(GAI)</td>
+</tr>
+<tr>
+<td>230</td>
+<td>Block Printing</td>
+</tr>
+<tr>
+<td>231</td>
+<td>Sanctity</td>
+</tr>
+<tr>
+<td>232</td>
+<td>New Research 232 (U)(GAI)</td>
+</tr>
+<tr>
+<td>233</td>
+<td>Illumination</td>
+</tr>
+<tr>
+<td>234</td>
+<td>Conversion Enabler (H)</td>
+</tr>
+<tr>
+<td>235</td>
+<td>Camel (A)</td>
+</tr>
+<tr>
+<td>236</td>
+<td>Heavy Camel</td>
+</tr>
+<tr>
+<td>237</td>
+<td>Arbalest</td>
+</tr>
+<tr>
+<td>238</td>
+<td>New Research 238 (U)(GAI)</td>
+</tr>
+<tr>
+<td>239</td>
+<td>Heavy Scorpion</td>
+</tr>
+<tr>
+<td>240</td>
+<td>Galley (A)</td>
+</tr>
+<tr>
+<td>241</td>
+<td>New Research 241 (U)(GAI)</td>
+</tr>
+<tr>
+<td>242</td>
+<td>Demolition Ship (A)</td>
+</tr>
+<tr>
+<td>243</td>
+<td>Fire Ship (A)</td>
+</tr>
+<tr>
+<td>244</td>
+<td>Heavy Demolition Ship</td>
+</tr>
+<tr>
+<td>245</td>
+<td>New Research 245 (U)(GAI)</td>
+</tr>
+<tr>
+<td>246</td>
+<td>Fast Fire Ship</td>
+</tr>
+<tr>
+<td>247</td>
+<td>New Research 247 (U)(GAI)</td>
+</tr>
+<tr>
+<td>248</td>
+<td>New Research 248 (U)(GAI)</td>
+</tr>
+<tr>
+<td>249</td>
+<td>Hand Cart</td>
+</tr>
+<tr>
+<td>250</td>
+<td>New Research 250 (U)(GAI)</td>
+</tr>
+<tr>
+<td>251</td>
+<td>New Research 251 (U)(GAI)</td>
+</tr>
+<tr>
+<td>252</td>
+<td>Fervor</td>
+</tr>
+<tr>
+<td>253</td>
+<td>New Research 253 (U)(GAI)</td>
+</tr>
+<tr>
+<td>254</td>
+<td>Light Cavalry</td>
+</tr>
+<tr>
+<td>255</td>
+<td>Siege Ram</td>
+</tr>
+<tr>
+<td>256</td>
+<td>Trebuchet, Packed (A)</td>
+</tr>
+<tr>
+<td>257</td>
+<td>Onager</td>
+</tr>
+<tr>
+<td>258</td>
+<td>Shadow Saw Mill 1 (U)</td>
+</tr>
+<tr>
+<td>259</td>
+<td>New Research 259 (U)(GAI)</td>
+</tr>
+<tr>
+<td>260</td>
+<td>New Research 260 (U)(GAI)</td>
+</tr>
+<tr>
+<td>261</td>
+<td>Transport Ship (A)</td>
+</tr>
+<tr>
+<td>262</td>
+<td>Samurai (A)(JAP)</td>
+</tr>
+<tr>
+<td>263</td>
+<td>Longbowman (A)(BRI)</td>
+</tr>
+<tr>
+<td>264</td>
+<td>Champion</td>
+</tr>
+<tr>
+<td>265</td>
+<td>Paladin</td>
+</tr>
+<tr>
+<td>266</td>
+<td>Castle Built (U)</td>
+</tr>
+<tr>
+<td>267</td>
+<td>Cataphract (A)(BYZ)</td>
+</tr>
+<tr>
+<td>268</td>
+<td>Chu Ko Nu (A)(CHI)</td>
+</tr>
+<tr>
+<td>269</td>
+<td>Mameluke (A)(SAR)</td>
+</tr>
+<tr>
+<td>270</td>
+<td>Berserker (U)(GOT)</td>
+</tr>
+<tr>
+<td>271</td>
+<td>Jannisary (A)(TUR)</td>
+</tr>
+<tr>
+<td>272</td>
+<td>Longboat (A)(VIK)</td>
+</tr>
+<tr>
+<td>273</td>
+<td>Mangudai (A)(MON)</td>
+</tr>
+<tr>
+<td>274</td>
+<td>War Elephant (A)(PER)</td>
+</tr>
+<tr>
+<td>275</td>
+<td>Throwing Axemen (A)(FRA)</td>
+</tr>
+<tr>
+<td>276</td>
+<td>Teutonic Knight (A)(TEU)</td>
+</tr>
+<tr>
+<td>277</td>
+<td>Woad Raider (A)(CEL)</td>
+</tr>
+<tr>
+<td>278</td>
+<td>Stone Mining</td>
+</tr>
+<tr>
+<td>279</td>
+<td>Stone Shaft Mining</td>
+</tr>
+<tr>
+<td>280</td>
+<td>Town Patrol</td>
+</tr>
+<tr>
+<td>281</td>
+<td>Blacksmith (A)</td>
+</tr>
+<tr>
+<td>282</td>
+<td>Mine has been built (U)</td>
+</tr>
+<tr>
+<td>283</td>
+<td>Buildings +10% HP (BYZ)</td>
+</tr>
+<tr>
+<td>284</td>
+<td>Trash Units Cost -25% (BYZ)</td>
+</tr>
+<tr>
+<td>285</td>
+<td>Free Chemistry (U)(TUR)</td>
+</tr>
+<tr>
+<td>286</td>
+<td>Cannon Galleons +25% HP (TUR)</td>
+</tr>
+<tr>
+<td>287</td>
+<td>Free Horse Collar (U)(FRA)</td>
+</tr>
+<tr>
+<td>288</td>
+<td>Free Heavy Plow (U)(FRA)</td>
+</tr>
+<tr>
+<td>289</td>
+<td>Free Crop Rotation (U)(FRA)</td>
+</tr>
+<tr>
+<td>290</td>
+<td>Knights +20% HP (FRA)</td>
+</tr>
+<tr>
+<td>291</td>
+<td>Infantry Cost -50% (H)</td>
+</tr>
+<tr>
+<td>292</td>
+<td>New Research 292 (U)(GAI)</td>
+</tr>
+<tr>
+<td>293</td>
+<td>Fishing Ships, Trade Cogs +20% MS (H)</td>
+</tr>
+<tr>
+<td>294</td>
+<td>Units 2 Conversion Resistance (H)</td>
+</tr>
+<tr>
+<td>295</td>
+<td>New Research 295 (U)(GAI)</td>
+</tr>
+<tr>
+<td>296</td>
+<td>New Research 296 (U)(GAI)</td>
+</tr>
+<tr>
+<td>297</td>
+<td>New Research 297 (U)(GAI)</td>
+</tr>
+<tr>
+<td>298</td>
+<td>New Research 298 (U)(GAI)</td>
+</tr>
+<tr>
+<td>299</td>
+<td>New Research 299 (U)(GAI)</td>
+</tr>
+<tr>
+<td>300</td>
+<td>Gold Miners +15% WS (TUR)</td>
+</tr>
+<tr>
+<td>301</td>
+<td>Gunpowder Units +25% HP (TUR)</td>
+</tr>
+<tr>
+<td>302</td>
+<td>Start With 6 Villagers (CHI)</td>
+</tr>
+<tr>
+<td>303</td>
+<td>New Research 303 (U)(GAI)</td>
+</tr>
+<tr>
+<td>304</td>
+<td>Techs Cost -0% (CHI)</td>
+</tr>
+<tr>
+<td>305</td>
+<td>New Research 305 (U)(GAI)</td>
+</tr>
+<tr>
+<td>306</td>
+<td>Fishing Ships X2 HP, +5% WS, +2 PA (JAP)</td>
+</tr>
+<tr>
+<td>307</td>
+<td>New Research 307 (U)(GAI)</td>
+</tr>
+<tr>
+<td>308</td>
+<td>New Research 308 (U)(GAI)</td>
+</tr>
+<tr>
+<td>309</td>
+<td>New Research 309 (U)(GAI)</td>
+</tr>
+<tr>
+<td>310</td>
+<td>New Research 310 (U)(GAI)</td>
+</tr>
+<tr>
+<td>311</td>
+<td>Transport Ships x2 HP, x2 Garrison (U)</td>
+</tr>
+<tr>
+<td>312</td>
+<td>Cav Archers +4 AP vs Buildings (SAR)</td>
+</tr>
+<tr>
+<td>313</td>
+<td>New Research 313 (U)(GAI)</td>
+</tr>
+<tr>
+<td>314</td>
+<td>Farms Cost -33% (TEU)</td>
+</tr>
+<tr>
+<td>315</td>
+<td>Conscription</td>
+</tr>
+<tr>
+<td>316</td>
+<td>Redemption</td>
+</tr>
+<tr>
+<td>317</td>
+<td>Boarding (H)</td>
+</tr>
+<tr>
+<td>318</td>
+<td>New Research 318 (U)(GAI)</td>
+</tr>
+<tr>
+<td>319</td>
+<td>Atonement</td>
+</tr>
+<tr>
+<td>320</td>
+<td>Siege Onager</td>
+</tr>
+<tr>
+<td>321</td>
+<td>Sappers</td>
+</tr>
+<tr>
+<td>322</td>
+<td>Murder Holes</td>
+</tr>
+<tr>
+<td>323</td>
+<td>New Research 323 (U)(GAI)</td>
+</tr>
+<tr>
+<td>324</td>
+<td>New Research 324 (U)(GAI)</td>
+</tr>
+<tr>
+<td>325</td>
+<td>Castles Cost -25% (FRA)</td>
+</tr>
+<tr>
+<td>326</td>
+<td>New Research 326 (U)(GAI)</td>
+</tr>
+<tr>
+<td>327</td>
+<td>Infantry +1 AP vs Buildings (GOT)</td>
+</tr>
+<tr>
+<td>328</td>
+<td>New Research 328 (U)(GAI)</td>
+</tr>
+<tr>
+<td>329</td>
+<td>New Research 329 (U)(GAI)</td>
+</tr>
+<tr>
+<td>330</td>
+<td>New Research 330 (U)(GAI)</td>
+</tr>
+<tr>
+<td>331</td>
+<td>Houses Cost, Creation Time 1/3 (U)(GOT)</td>
+</tr>
+<tr>
+<td>332</td>
+<td>Outpost (A)</td>
+</tr>
+<tr>
+<td>333</td>
+<td>Towers +4 Max Arrows (U)(TEU)</td>
+</tr>
+<tr>
+<td>334</td>
+<td>New Research 334 (U)(GAI)</td>
+</tr>
+<tr>
+<td>335</td>
+<td>New Research 335 (U)(GAI)</td>
+</tr>
+<tr>
+<td>336</td>
+<td>Town Centers +10 Garrison (TEU)</td>
+</tr>
+<tr>
+<td>337</td>
+<td>Transport Ships x2 HP, x2 Garrison (SAR)</td>
+</tr>
+<tr>
+<td>338</td>
+<td>Archers 87% Accuracy (H)</td>
+</tr>
+<tr>
+<td>339</td>
+<td>Galleys x2 LoS (U)(JAP)</td>
+</tr>
+<tr>
+<td>340</td>
+<td>Mills, Lumber/Mining Camps Cost -50% (JAP)</td>
+</tr>
+<tr>
+<td>341</td>
+<td>Infantry +25% AS (JAP)</td>
+</tr>
+<tr>
+<td>342</td>
+<td>Town Center x2 HP (PER)</td>
+</tr>
+<tr>
+<td>343</td>
+<td>Infantry Cost -0% (GOT)</td>
+</tr>
+<tr>
+<td>344</td>
+<td>Infantry Cost -25% (GOT)</td>
+</tr>
+<tr>
+<td>345</td>
+<td>Infantry Cost -35% (U)(GOT)</td>
+</tr>
+<tr>
+<td>346</td>
+<td>Infantry Cost -50% (U)(GOT)</td>
+</tr>
+<tr>
+<td>347</td>
+<td>Monks 8 Healing Range (TEU)</td>
+</tr>
+<tr>
+<td>348</td>
+<td>New Research 348 (U)(GAI)</td>
+</tr>
+<tr>
+<td>349</td>
+<td>Docks x2 HP (PER)</td>
+</tr>
+<tr>
+<td>350</td>
+<td>Techs Cost -10% (CHI)</td>
+</tr>
+<tr>
+<td>351</td>
+<td>Techs Cost -15% (CHI)</td>
+</tr>
+<tr>
+<td>352</td>
+<td>Techs Cost -20% (CHI)</td>
+</tr>
+<tr>
+<td>353</td>
+<td>Towers +5 Garrison, +4 Max Arrows (TEU)</td>
+</tr>
+<tr>
+<td>354</td>
+<td>Castle (A)(TUR)</td>
+</tr>
+<tr>
+<td>355</td>
+<td>Markets Tax 5%, Cost -75 Wood (SAR)</td>
+</tr>
+<tr>
+<td>356</td>
+<td>Techs Cost -50% (U)</td>
+</tr>
+<tr>
+<td>357</td>
+<td>Fish Trap (A)</td>
+</tr>
+<tr>
+<td>358</td>
+<td>Mangonel (A)</td>
+</tr>
+<tr>
+<td>359</td>
+<td>Sub-Shadow Age4 (U)</td>
+</tr>
+<tr>
+<td>360</td>
+<td>Elite Longbowman (BRI)</td>
+</tr>
+<tr>
+<td>361</td>
+<td>Elite Cataphract (BYZ)</td>
+</tr>
+<tr>
+<td>362</td>
+<td>Elite Chu Ko Nu (CHI)</td>
+</tr>
+<tr>
+<td>363</td>
+<td>Elite Throwing Axeman (FRA)</td>
+</tr>
+<tr>
+<td>364</td>
+<td>Elite Teutonic Knight (TEU)</td>
+</tr>
+<tr>
+<td>365</td>
+<td>Elite Huskarl (GOT)</td>
+</tr>
+<tr>
+<td>366</td>
+<td>Elite Samurai (JAP)</td>
+</tr>
+<tr>
+<td>367</td>
+<td>Elite War Elephant (PER)</td>
+</tr>
+<tr>
+<td>368</td>
+<td>Elite Mameluke (SAR)</td>
+</tr>
+<tr>
+<td>369</td>
+<td>Elite Janissary (TUR)</td>
+</tr>
+<tr>
+<td>370</td>
+<td>Elite Woad Raider (CEL)</td>
+</tr>
+<tr>
+<td>371</td>
+<td>Elite Mangudai (MON)</td>
+</tr>
+<tr>
+<td>372</td>
+<td>Elite Longboat (VIK)</td>
+</tr>
+<tr>
+<td>373</td>
+<td>Shipwright</td>
+</tr>
+<tr>
+<td>374</td>
+<td>Careening</td>
+</tr>
+<tr>
+<td>375</td>
+<td>Dry Dock</td>
+</tr>
+<tr>
+<td>376</td>
+<td>Elite Cannon Galleon</td>
+</tr>
+<tr>
+<td>377</td>
+<td>Siege Engineers</td>
+</tr>
+<tr>
+<td>378</td>
+<td>New Research 378 (U)(GAI)</td>
+</tr>
+<tr>
+<td>379</td>
+<td>Hoardings</td>
+</tr>
+<tr>
+<td>380</td>
+<td>Heated Shot</td>
+</tr>
+<tr>
+<td>381</td>
+<td>TCs Cost -50% Wood (BRI)</td>
+</tr>
+<tr>
+<td>382</td>
+<td>Foot Archers +1 Range (BRI)</td>
+</tr>
+<tr>
+<td>383</td>
+<td>Shepherds +25% WS (BRI)</td>
+</tr>
+<tr>
+<td>384</td>
+<td>Eagle Warrior</td>
+</tr>
+<tr>
+<td>385</td>
+<td>Lumberjacks +15% WS (CEL)</td>
+</tr>
+<tr>
+<td>386</td>
+<td>Siege Weapons +20% AS (CEL)</td>
+</tr>
+<tr>
+<td>387</td>
+<td>Eagle Scout extra AP (INC)</td>
+</tr>
+<tr>
+<td>388</td>
+<td>Light Cavalry, Hussar +30% HP (MON)</td>
+</tr>
+<tr>
+<td>389</td>
+<td>Hunters +50% WS (MON)</td>
+</tr>
+<tr>
+<td>390</td>
+<td>Fortifications Built 25% Faster (KOR)</td>
+</tr>
+<tr>
+<td>391</td>
+<td>Infantry +20% HP (VIK)</td>
+</tr>
+<tr>
+<td>392</td>
+<td>Free Wheelbarrow (U)(VIK)</td>
+</tr>
+<tr>
+<td>393</td>
+<td>Infantry +15% MS (CEL)</td>
+</tr>
+<tr>
+<td>394</td>
+<td>Cav Archers +20% AS (MON)</td>
+</tr>
+<tr>
+<td>395</td>
+<td>Boats 10% Cheaper (VIK)</td>
+</tr>
+<tr>
+<td>396</td>
+<td>Demolition Ships +50% HP (CHI)</td>
+</tr>
+<tr>
+<td>397</td>
+<td>Fire Ships +20% AS (BYZ)</td>
+</tr>
+<tr>
+<td>398</td>
+<td>Elite Berserk (VIK)</td>
+</tr>
+<tr>
+<td>399</td>
+<td>Berserk (A)(VIK)</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Free Hand Cart (U)(VIK)</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Farmers +15% WS (U)(BYZ)</td>
+</tr>
+<tr>
+<td>402</td>
+<td>Hunters +5 AP vs Boars, Carry +15 (GOT)</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Foot Archers +2 Range (BRI)</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Galleys +20% AS (SAR)</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Sheep Conversion Resistance (CEL)</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Bonus Population +10 (GOT)</td>
+</tr>
+<tr>
+<td>407</td>
+<td>Monks 4 Healing Range (H)</td>
+</tr>
+<tr>
+<td>408</td>
+<td>Spies/Treason</td>
+</tr>
+<tr>
+<td>409</td>
+<td>TCs +10%/+15%/+20% WS (PER)</td>
+</tr>
+<tr>
+<td>410</td>
+<td>TCs +15% WS (U)(PER)</td>
+</tr>
+<tr>
+<td>411</td>
+<td>TCs +20% WS (U)(PER)</td>
+</tr>
+<tr>
+<td>412</td>
+<td>Docks +10/+15%/+20% WS (PER)</td>
+</tr>
+<tr>
+<td>413</td>
+<td>Docks +15% WS (U)(PER)</td>
+</tr>
+<tr>
+<td>414</td>
+<td>Docks +20% WS (U)(PER)</td>
+</tr>
+<tr>
+<td>415</td>
+<td>Infantry +15% HP (VIK)</td>
+</tr>
+<tr>
+<td>416</td>
+<td>Infantry +10% HP (VIK)</td>
+</tr>
+<tr>
+<td>417</td>
+<td>Buildings +20% HP (BYZ)</td>
+</tr>
+<tr>
+<td>418</td>
+<td>Buildings +30% HP (BYZ)</td>
+</tr>
+<tr>
+<td>419</td>
+<td>Buildings +40% HP (BYZ)</td>
+</tr>
+<tr>
+<td>420</td>
+<td>Infantry +15% AS (U)(JAP)</td>
+</tr>
+<tr>
+<td>421</td>
+<td>Infantry +20% AS (U)(JAP)</td>
+</tr>
+<tr>
+<td>422</td>
+<td>Fishing Ships +10% WS (JAP)</td>
+</tr>
+<tr>
+<td>423</td>
+<td>Fishing Ships +15% WS (JAP)</td>
+</tr>
+<tr>
+<td>424</td>
+<td>Fishing Ships +20% WS (JAP)</td>
+</tr>
+<tr>
+<td>425</td>
+<td>Town Centers +5 Pop (CHI)</td>
+</tr>
+<tr>
+<td>426</td>
+<td>Petard (A)</td>
+</tr>
+<tr>
+<td>427</td>
+<td>Genitour (A)</td>
+</tr>
+<tr>
+<td>428</td>
+<td>Hussar</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Halberdier</td>
+</tr>
+<tr>
+<td>430</td>
+<td>Elite Genitour</td>
+</tr>
+<tr>
+<td>431</td>
+<td>Jaguar Warrior (A)(AZT)</td>
+</tr>
+<tr>
+<td>432</td>
+<td>Elite Jaguar Warrior (AZT)</td>
+</tr>
+<tr>
+<td>433</td>
+<td>Eagle Scout (A)</td>
+</tr>
+<tr>
+<td>434</td>
+<td>Elite Eagle Warrior</td>
+</tr>
+<tr>
+<td>435</td>
+<td>Bloodlines</td>
+</tr>
+<tr>
+<td>436</td>
+<td>Parthian Tactics</td>
+</tr>
+<tr>
+<td>437</td>
+<td>Thumb Ring</td>
+</tr>
+<tr>
+<td>438</td>
+<td>Theocracy</td>
+</tr>
+<tr>
+<td>439</td>
+<td>Heresy</td>
+</tr>
+<tr>
+<td>440</td>
+<td>Supremacy (SPA)</td>
+</tr>
+<tr>
+<td>441</td>
+<td>Herbal Medicine</td>
+</tr>
+<tr>
+<td>442</td>
+<td>Free Guard Tower (KOR)</td>
+</tr>
+<tr>
+<td>443</td>
+<td>Free Keep (KOR)</td>
+</tr>
+<tr>
+<td>444</td>
+<td>Free Bombard Tower (KOR)</td>
+</tr>
+<tr>
+<td>445</td>
+<td>Shinkichon (KOR)</td>
+</tr>
+<tr>
+<td>446</td>
+<td>Huskarl (A)(GOT)</td>
+</tr>
+<tr>
+<td>447</td>
+<td>Turtle Ship (A)(KOR)</td>
+</tr>
+<tr>
+<td>448</td>
+<td>Elite Turtle Ship (KOR)</td>
+</tr>
+<tr>
+<td>449</td>
+<td>War Wagon (A)(KOR)</td>
+</tr>
+<tr>
+<td>450</td>
+<td>Elite War Wagon (KOR)</td>
+</tr>
+<tr>
+<td>451</td>
+<td>Tower +1 range (U)(KOR)</td>
+</tr>
+<tr>
+<td>452</td>
+<td>Tower +2 range (KOR)</td>
+</tr>
+<tr>
+<td>453</td>
+<td>Tower +3 range (KOR)</td>
+</tr>
+<tr>
+<td>454</td>
+<td>Eagle Scout extra AP (AZT)</td>
+</tr>
+<tr>
+<td>455</td>
+<td>Eagle Scout extra AP (MAY)</td>
+</tr>
+<tr>
+<td>456</td>
+<td>Herbal Medicine +5 Monk HP (AZT)</td>
+</tr>
+<tr>
+<td>457</td>
+<td>Perfusion (GOT)</td>
+</tr>
+<tr>
+<td>458</td>
+<td>Cav Archers Cost -25% (HUN)</td>
+</tr>
+<tr>
+<td>459</td>
+<td>Cav Archers Cost -30% (HUN)</td>
+</tr>
+<tr>
+<td>460</td>
+<td>Atlatl (AZT)</td>
+</tr>
+<tr>
+<td>461</td>
+<td>Warwolf (BRI)</td>
+</tr>
+<tr>
+<td>462</td>
+<td>Great Wall (CHI)</td>
+</tr>
+<tr>
+<td>463</td>
+<td>Chieftains (VIK)</td>
+</tr>
+<tr>
+<td>464</td>
+<td>Greek Fire (BYZ)</td>
+</tr>
+<tr>
+<td>465</td>
+<td>Cartography (U)</td>
+</tr>
+<tr>
+<td>466</td>
+<td>Free War Galley (ITA)</td>
+</tr>
+<tr>
+<td>467</td>
+<td>Genoese Crossbowman (A)(ITA)</td>
+</tr>
+<tr>
+<td>468</td>
+<td>Elite Genoese Crossbowman (ITA)</td>
+</tr>
+<tr>
+<td>469</td>
+<td>New Research (U)(GAI)</td>
+</tr>
+<tr>
+<td>470</td>
+<td>Wonder Built (U)(GAI)</td>
+</tr>
+<tr>
+<td>471</td>
+<td>Magyar Huszar (A)(MAG)</td>
+</tr>
+<tr>
+<td>472</td>
+<td>Elite Magyar Huszar (MAG)</td>
+</tr>
+<tr>
+<td>473</td>
+<td>Scouts 10% Cheaper (MAG)</td>
+</tr>
+<tr>
+<td>474</td>
+<td>Vil Forging (INC)</td>
+</tr>
+<tr>
+<td>475</td>
+<td>Vil Iron Casting (INC)</td>
+</tr>
+<tr>
+<td>476</td>
+<td>Vil Blast Furnace (INC)</td>
+</tr>
+<tr>
+<td>477</td>
+<td>Vil Scale Armor (INC)</td>
+</tr>
+<tr>
+<td>478</td>
+<td>Vil Chain Armor (INC)</td>
+</tr>
+<tr>
+<td>479</td>
+<td>Vil Plate Armor (INC)</td>
+</tr>
+<tr>
+<td>480</td>
+<td>Elephant Archer (A)(IND)</td>
+</tr>
+<tr>
+<td>481</td>
+<td>Elite Elephant Archer (IND)</td>
+</tr>
+<tr>
+<td>482</td>
+<td>Stronghold (CEL)</td>
+</tr>
+<tr>
+<td>483</td>
+<td>Marauders (HUN)</td>
+</tr>
+<tr>
+<td>484</td>
+<td>Yasama (JAP)</td>
+</tr>
+<tr>
+<td>485</td>
+<td>Tlatoani (MAY)</td>
+</tr>
+<tr>
+<td>486</td>
+<td>Panokseon (KOR)</td>
+</tr>
+<tr>
+<td>487</td>
+<td>Nomads (MON)</td>
+</tr>
+<tr>
+<td>488</td>
+<td>Boiling Oil (PER)</td>
+</tr>
+<tr>
+<td>489</td>
+<td>Ironclad (TEU)</td>
+</tr>
+<tr>
+<td>490</td>
+<td>Madrasah (SARA)</td>
+</tr>
+<tr>
+<td>491</td>
+<td>Sipahi (TUR)</td>
+</tr>
+<tr>
+<td>492</td>
+<td>Inquisition (SPA)</td>
+</tr>
+<tr>
+<td>493</td>
+<td>Chivalry (FRA)</td>
+</tr>
+<tr>
+<td>494</td>
+<td>Pavise (ITA)</td>
+</tr>
+<tr>
+<td>495</td>
+<td>Houses +5 pop (INC)</td>
+</tr>
+<tr>
+<td>496</td>
+<td>Villager Cost -10% (IND)</td>
+</tr>
+<tr>
+<td>497</td>
+<td>Villager Cost -20% (IND)</td>
+</tr>
+<tr>
+<td>498</td>
+<td>Villager Cost -30% (IND)</td>
+</tr>
+<tr>
+<td>499</td>
+<td>Silk Road (ITA)</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Gunpowder Units 15% Cheaper (ITA)</td>
+</tr>
+<tr>
+<td>501</td>
+<td>Boats 15% Cheaper (VIK)</td>
+</tr>
+<tr>
+<td>502</td>
+<td>Boats 20% Cheaper (VIK)</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Boyar (A)(SLA)</td>
+</tr>
+<tr>
+<td>504</td>
+<td>Elite Boyar (SLA)</td>
+</tr>
+<tr>
+<td>505</td>
+<td>Camels +1/+1 Armor (IND)</td>
+</tr>
+<tr>
+<td>506</td>
+<td>Sultans (IND)</td>
+</tr>
+<tr>
+<td>507</td>
+<td>Shatagni (IND)</td>
+</tr>
+<tr>
+<td>508</td>
+<td>Kamayuk (A)(INC)</td>
+</tr>
+<tr>
+<td>509</td>
+<td>Elite Kamayuk (INC)</td>
+</tr>
+<tr>
+<td>510</td>
+<td>Siege Tower (U)</td>
+</tr>
+<tr>
+<td>511</td>
+<td>Siege 15% Cheaper (SLA)</td>
+</tr>
+<tr>
+<td>512</td>
+<td>Orthodoxy (SLA)</td>
+</tr>
+<tr>
+<td>513</td>
+<td>Druzhina (SLA)</td>
+</tr>
+<tr>
+<td>514</td>
+<td>Mercenaries (MAG)</td>
+</tr>
+<tr>
+<td>515</td>
+<td>Recurve Bow (MAG)</td>
+</tr>
+<tr>
+<td>516</td>
+<td>Andean Sling (INC)</td>
+</tr>
+<tr>
+<td>517</td>
+<td>Couriers (INC)</td>
+</tr>
+<tr>
+<td>518</td>
+<td>Fisher Carry +25 (IND)</td>
+</tr>
+<tr>
+<td>519</td>
+<td>Buildings Cost -20% Stone (INC)</td>
+</tr>
+<tr>
+<td>520</td>
+<td>Archer HP (U)(MAG)</td>
+</tr>
+<tr>
+<td>521</td>
+<td>Imperial Camel (IND)</td>
+</tr>
+<tr>
+<td>522</td>
+<td>Condottiero (A)</td>
+</tr>
+<tr>
+<td>523</td>
+<td>Palisade Gate (A)</td>
+</tr>
+<tr>
+<td>524</td>
+<td>Foragers +25% WS (FRA)</td>
+</tr>
+<tr>
+<td>525</td>
+<td>Revetments (H)</td>
+</tr>
+<tr>
+<td>526</td>
+<td>Hunting Dogs</td>
+</tr>
+<tr>
+<td>527</td>
+<td>Fire Tower (A)(H)</td>
+</tr>
+<tr>
+<td>528</td>
+<td>Slinger (A)(INC)</td>
+</tr>
+<tr>
+<td>529</td>
+<td>Civ: Britons (BRI)</td>
+</tr>
+<tr>
+<td>530</td>
+<td>Civ: Franks (FRA)</td>
+</tr>
+<tr>
+<td>531</td>
+<td>Civ: Goths (GOT)</td>
+</tr>
+<tr>
+<td>532</td>
+<td>Civ: Teutons (TEU)</td>
+</tr>
+<tr>
+<td>533</td>
+<td>Civ: Japanese (JAP)</td>
+</tr>
+<tr>
+<td>534</td>
+<td>Civ: Chinese (CHI)</td>
+</tr>
+<tr>
+<td>535</td>
+<td>Civ: Byzantines (BYZ)</td>
+</tr>
+<tr>
+<td>536</td>
+<td>Civ: Persians (PER)</td>
+</tr>
+<tr>
+<td>537</td>
+<td>Civ: Saracens (SAR)</td>
+</tr>
+<tr>
+<td>538</td>
+<td>Civ: Turks (TUR)</td>
+</tr>
+<tr>
+<td>539</td>
+<td>Civ: Vikings (VIK)</td>
+</tr>
+<tr>
+<td>540</td>
+<td>Civ: Mongols (MON)</td>
+</tr>
+<tr>
+<td>541</td>
+<td>Civ: Celts (CEL)</td>
+</tr>
+<tr>
+<td>542</td>
+<td>Civ: Spanish (SPA)</td>
+</tr>
+<tr>
+<td>543</td>
+<td>Civ: Aztecs (AZT)</td>
+</tr>
+<tr>
+<td>544</td>
+<td>Civ: Mayans (MAY)</td>
+</tr>
+<tr>
+<td>545</td>
+<td>Civ: Huns (HUN)</td>
+</tr>
+<tr>
+<td>546</td>
+<td>Civ: Koreans (KOR)</td>
+</tr>
+<tr>
+<td>547</td>
+<td>Civ: Italians (ITA)</td>
+</tr>
+<tr>
+<td>548</td>
+<td>Civ: Indians (IND)</td>
+</tr>
+<tr>
+<td>549</td>
+<td>Civ: Incas (INC)</td>
+</tr>
+<tr>
+<td>550</td>
+<td>Civ: Magyars (MAG)</td>
+</tr>
+<tr>
+<td>551</td>
+<td>Civ: Slavs (SLA)</td>
+</tr>
+<tr>
+<td>552</td>
+<td>Hunting Dogs (MON)</td>
+</tr>
+</tbody>
+</table></div>
+        </div>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script src="../../js/base.js"></script>
+    </body>
+</html>

@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Daniel Derevjanik">
+        
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+
+	<title>Scenario .SCX - AgeScx</title>
+
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <link href="../css/base.css" rel="stylesheet">
+        <link href="../responsive.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="..">AgeScx</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="..">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../installation/">Installation</a>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Getting Started <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../gettingstarted/adding-unit/">Adding new unit</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../gettingstarted/changing-map/">Changing map</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Scenario <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../scenario/basic/">Basic</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../scenario/players/">Players</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../scenario/player/">--Player</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../scenario/resource/">----Resource</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../scenario/ai/">----AI</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../scenario/tiles/">Tiles</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../scenario/tile/">--Tile</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../scenario/units/">Units</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../scenario/unit/">--Unit</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../scenario/triggers/">Triggers</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../scenario/trigger/">--Trigger</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../scenario/effect/">--Effect</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../scenario/condition/">--Condition</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../scenario/messages/">Messages</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Enums <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../enums/aitypes/">AI Types</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../enums/civilizations/">Civilizations</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../enums/colors/">Player Colors</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../enums/groups/">Groups</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../enums/resources/">Resources</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../enums/sounds/">Sounds</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../enums/techs/">Techs</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../enums/terrains/">Terrain</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../enums/units/">Units</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Formats <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li class="active">
+                            <a href="./">Scenario .SCX</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a rel="next" href="../enums/units/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li class="disabled">
+                    <a rel="prev" >
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/dderevjanik/AgeScx">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#scx-format">SCX format</a></li>
+        
+            <li><a href="#introduction">Introduction</a></li>
+        
+            <li><a href="#format-standart">Format Standart</a></li>
+        
+            <li><a href="#list-of-structures">List of Structures</a></li>
+        
+            <li><a href="#about-scenario">About Scenario</a></li>
+        
+            <li><a href="#format">Format</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="scx-format">SCX format</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Scx format was formed by Esemble Studios, <a href="http://www.microsoft.com">Microsoft</a> for their games, first time for <a href="http://en.wikipedia.org/wiki/Age_of_Empires">Age of Empires</a>  (1997) and second for <a href="http://en.wikipedia.org/wiki/Age_of_Empires_II:_The_Age_of_Kings">Age of Empires 2</a>  (1999), and for their last game on genie engine <a href="http://en.wikipedia.org/wiki/Star_Wars:_Galactic_Battlegrounds">Star Wars: Galactic Battlegrounds</a>. Format is used to store maps (scenarios). It's uses C++98 standart datatypes. Also scenario data are compressed with DEFLAT method. This document primary describes scx format used for Age of Empires 2, version 1.21.</p>
+<h2 id="format-standart">Format Standart</h2>
+<p>Most of this document originaly writen by DiGit's. specification with knowledge by AOHH and Iberico format and finally extend with me.</p>
+<h2 id="list-of-structures">List of Structures</h2>
+<ul>
+<li><a href="#uncompressed-header"><strong>Uncompressed Header</strong></a> -basic information about scenario</li>
+<li><a href="#compressed-data"><strong>Compressed Data</strong></a> -compressed information about scenario</li>
+<li><a href="#player-data1">Player Data 1</a> -</li>
+<li><a href="#messages"><strong>Messages</strong></a> -messages like instructions and hints</li>
+<li><a href="#cinematics"><strong>Cinematics</strong></a> -cinematics file names</li>
+<li><a href="#background-image">Background Image</a> -background image information</li>
+<li><a href="#bitmap-info-header">Bitmap Info Header</a> -image information (if image incldued)</li>
+<li><a href="#player-2-data">Player Data 2</a> -</li>
+<li><a href="#struct-ai-files">AI Files</a> -ai files included</li>
+<li><a href="#struct-resources">Resources</a> -resources for player (wo population)</li>
+<li><a href="#global-victory"><strong>Global Victory</strong></a> -global victory information</li>
+<li><a href="#diplomacy"><strong>Diplomacy</strong></a> -diplomacy for every player</li>
+<li><a href="#struct-diplomacy-per-player">Diplomacy per Player</a></li>
+<li><a href="#disables">Disables</a> -disables tehnologies, units and buildings</li>
+<li><a href="#map"><strong>Map</strong></a> -information about map</li>
+<li><a href="#struct-terrain">Terrain</a> -information about tile(s) (type and elevation)</li>
+<li><a href="#units-section">Units Section</a> -how many units section is described</li>
+<li><a href="#struct-player-data-4">Player Data 4</a> -</li>
+<li><a href="#struct-player-units">Player Units</a> -how many units are stored per player</li>
+<li><a href="#struct-unit"><strong>Unit</strong></a> -all unit information</li>
+<li><a href="#player-data-3">Player Data 3</a> - </li>
+<li><a href="#struct-player-data-3">Player Data 3 Sub</a> -</li>
+<li><a href="#triggers-section">Triggers Section</a> -how many triggers</li>
+<li><a href="#structure-trigger"><strong>Trigger</strong></a> -all stored triggers</li>
+<li><a href="#structure-effect"><strong>Efffect</strong></a> -all stored effects for trigger</li>
+<li><a href="#structure-condition"><strong>Condition</strong></a> -all stored conditoins for trigger</li>
+<li><a href="#included-files">Included Files</a> -included files</li>
+<li><a href="#per-file-error">PER File Error</a> -PER file error</li>
+</ul>
+<h2 id="about-scenario">About Scenario</h2>
+<p>Here you will find interesting info about scenario files</p>
+<h3 id="coords">Coords</h3>
+<p>Coordinations [0, 0] starts from left point of map, continue to top of map [0, mapWidth]. Tiles are one dimension array, starting from position [0, 0].This image shows how are Tile[x, y] calculated. </p>
+<p><img alt="Map Coordinations" src="../img/map_coords.png" /></p>
+<h2 id="format">Format</h2>
+<h3 id="data-types">Data Types</h3>
+<p>A note about data lengths: they specify both the length of the data and
+how to interpret it. For example:</p>
+<ul>
+<li><strong>s32</strong> is a signed 32-bit integer</li>
+<li><strong>u16</strong> is an unsigned 16-bit integer</li>
+<li><strong>f32</strong> is a 32-bit (single-precision) floating point number</li>
+<li><strong>c4</strong> is a 4-byte character string</li>
+<li><strong>str16</strong> is a variable-length character string (see below)</li>
+<li><strong>40</strong> means 40 bytes of data</li>
+<li><strong>16*u16</strong> means 16 unsigned 16-bit integers</li>
+</ul>
+<p>Variable-length character strings are stored in the scenario as length/data
+pairs. For example "str16" means there is a 16-bit length field with value n
+followed by n bytes (characters). str32 is also used, but more rarely.</p>
+<h3 id="uncompressed-header">Uncompressed Header</h3>
+<table>
+<thead>
+<tr>
+<th>Length</th>
+<th>MinVer</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>c4</td>
+<td></td>
+<td>Version (ASCII): 1.10, 1.18, 1.21</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Length of header (excluding version and self)</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Unknown cosntant = 2</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Timestamp of last save</td>
+</tr>
+<tr>
+<td>str32</td>
+<td></td>
+<td>Scenario Instructions</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Unknown constant = 0</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Player count (thanks iberico)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="compressed-datait-uses-deflate-method-with-max_wbits-for-python">Compressed DataIt uses Deflate method with <em>(-MAX_WBITS, for python)</em></h3>
+<h4 id="header">Header</h4>
+<table>
+<thead>
+<tr>
+<th>Length</th>
+<th>MinVer</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Next unit ID to place</td>
+</tr>
+<tr>
+<td>f32</td>
+<td></td>
+<td>Version 2</td>
+</tr>
+<tr>
+<td>16*256</td>
+<td></td>
+<td>ASCII player names</td>
+</tr>
+<tr>
+<td>16*u32</td>
+<td>1.18</td>
+<td>string table player names</td>
+</tr>
+<tr>
+<td>16*16</td>
+<td></td>
+<td>Player Data#1 see <a href="#player-data1">sub-struct below</a></td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Unknown, usually 1</td>
+</tr>
+<tr>
+<td>f32</td>
+<td></td>
+<td>Unknown, always -1?</td>
+</tr>
+<tr>
+<td>str16</td>
+<td></td>
+<td>Original filename, created while first scenario save</td>
+</tr>
+</tbody>
+</table>
+<h5 id="player-data1">Player Data#1</h5>
+<table>
+<thead>
+<tr>
+<th>Length</th>
+<th>MinVer</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Boolean: Active</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Boolean: Human</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Civilization, see IDs at this document</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Unknown constant = 4</td>
+</tr>
+</tbody>
+</table>
+<h4 id="messages">Messages</h4>
+<table>
+<thead>
+<tr>
+<th>Length</th>
+<th>MinVer</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32</td>
+<td>1.18</td>
+<td>String table, Instructions</td>
+</tr>
+<tr>
+<td>u32</td>
+<td>1.18</td>
+<td>String table, Hints</td>
+</tr>
+<tr>
+<td>u32</td>
+<td>1.18</td>
+<td>String table, Victory</td>
+</tr>
+<tr>
+<td>u32</td>
+<td>1.18</td>
+<td>String table, Loss</td>
+</tr>
+<tr>
+<td>u32</td>
+<td>1.18</td>
+<td>String table, History</td>
+</tr>
+<tr>
+<td>u32</td>
+<td>1.22</td>
+<td>String table, Scouts</td>
+</tr>
+<tr>
+<td>str16</td>
+<td></td>
+<td>ASCII, Instructions</td>
+</tr>
+<tr>
+<td>str16</td>
+<td></td>
+<td>ASCII, Hints</td>
+</tr>
+<tr>
+<td>str16</td>
+<td></td>
+<td>ASCII, Victory</td>
+</tr>
+<tr>
+<td>str16</td>
+<td></td>
+<td>ASCII, Loss</td>
+</tr>
+<tr>
+<td>str16</td>
+<td></td>
+<td>ASCII, History</td>
+</tr>
+<tr>
+<td>str16</td>
+<td>1.22</td>
+<td>ASCII, Scouts</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cinematics">Cinematics</h4>
+<table>
+<thead>
+<tr>
+<th>Length</th>
+<th>MinVer</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>str16</td>
+<td></td>
+<td>ASCII, Pregame cinematic filename</td>
+</tr>
+<tr>
+<td>str16</td>
+<td></td>
+<td>ASCII, Victory cinematic filename</td>
+</tr>
+<tr>
+<td>str16</td>
+<td></td>
+<td>ASCII, Loss cinematic filename</td>
+</tr>
+<tr>
+<td>1</td>
+<td></td>
+<td>Separator (! in some version)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="background-image">Background Image</h4>
+<table>
+<thead>
+<tr>
+<th>Length</th>
+<th>MinVer</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>str16</td>
+<td></td>
+<td>ASCII, Background filename</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Boolean: Bitmap included</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Bitmap width</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Bitmap height</td>
+</tr>
+<tr>
+<td>s16</td>
+<td></td>
+<td><strong>Include</strong>, -1 if there's a bitmap, 1 otherwise, 2 exists before</td>
+</tr>
+<tr>
+<td>40+SIZE</td>
+<td></td>
+<td><a href="#bitmap-info-header">BITMAPINFOHEADER</a> (if Unknown is -1 or 2)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="bitmap-info-header">Bitmap Info Header</h4>
+<p><strong>WARNING:</strong> This section is readed only if above <strong>Include</strong> value is -1 or 2 !
+Look at this <a href="http://www.herdsoft.com/ti/davincie/davp3xo2.htm">btmp info header article</a> about format spec for more information</p>
+<table>
+<thead>
+<tr>
+<th>Length</th>
+<th>MinVer</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Size</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Width</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Height</td>
+</tr>
+<tr>
+<td>s16</td>
+<td></td>
+<td>Planes</td>
+</tr>
+<tr>
+<td>s16</td>
+<td></td>
+<td>BitCount</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Compression</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>SizeImage <strong>SIZ</strong></td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>XPels</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>YPels</td>
+</tr>
+<tr>
+<td>U32</td>
+<td></td>
+<td>Colors Used <strong>CLR</strong></td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Important Colors</td>
+</tr>
+<tr>
+<td>u32<strong>*CLR</strong></td>
+<td></td>
+<td>Calculated: u32*ColorsUsed</td>
+</tr>
+<tr>
+<td>u32<strong>*SIZ</strong></td>
+<td></td>
+<td>Calculated: u32*SizeImage</td>
+</tr>
+</tbody>
+</table>
+<h4 id="player-2-data">Player 2 Data</h4>
+<table>
+<thead>
+<tr>
+<th>Length</th>
+<th>MinVer</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>32str16</td>
+<td></td>
+<td>Unknown strings (2 per player?)</td>
+</tr>
+<tr>
+<td>16str16</td>
+<td></td>
+<td>AI names, one per player</td>
+</tr>
+<tr>
+<td>16*var</td>
+<td></td>
+<td>AI files, see <a href="#struct-ai-files">sub-struct below</a></td>
+</tr>
+<tr>
+<td>u8</td>
+<td></td>
+<td>AI type, 0 = custom, 1 = standard, 2 = none. Thanks iberico.</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Separator, 0xFFFFFF9D</td>
+</tr>
+<tr>
+<td>16*24</td>
+<td></td>
+<td>Resources, see <a href="#struct-resources">sub-struct below</a></td>
+</tr>
+</tbody>
+</table>
+<h5 id="struct-ai-files">Struct: AI Files</h5>
+<table>
+<thead>
+<tr>
+<th>Length</th>
+<th>MinVer</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32</td>
+<td></td>
+<td>unknown, always 0</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>unknown, always 0</td>
+</tr>
+<tr>
+<td>str32</td>
+<td></td>
+<td>AI .per file text</td>
+</tr>
+</tbody>
+</table>
+<h5 id="struct-resources">Struct: Resources</h5>
+<table>
+<thead>
+<tr>
+<th>Length</th>
+<th>MinVer</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Gold</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Wood</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Food</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Stone</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>"Ore X", not used in AOK</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>padding, always 0</td>
+</tr>
+</tbody>
+</table>
+<h4 id="global-victory">Global Victory</h4>
+<table>
+<thead>
+<tr>
+<th>Length</th>
+<th>MinVer</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Separator, 0xFFFFFF9D</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Boolean: conquest required? (for custom vict)</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Unused = 0</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Number of relics required</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Unused = 0</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Explored % of map required</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Unused = 0</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Boolean: all custom conditions required?</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Mode, see below</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Required score for score victory</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Time for timed game, in 10ths of a year (eg, 100 = 10yr)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="diplomacy">Diplomacy</h4>
+<table>
+<thead>
+<tr>
+<th>Length</th>
+<th>MinVer</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16*64</td>
+<td></td>
+<td>Per-player diplomacy, see <a href="#struct-diplomacy-per-player">sub-struct</a> below</td>
+</tr>
+<tr>
+<td>11520</td>
+<td></td>
+<td>Unused, always 0. Yes, that's 11520 bytes.</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Separator, 0xFFFFFF9D (why here??)</td>
+</tr>
+<tr>
+<td>16*u32</td>
+<td></td>
+<td>Boolean: Allied vict, per-player. Ignored (see PData3). Thanks iberico.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="struct-diplomacy-per-player">Struct: Diplomacy Per-player</h5>
+<table>
+<thead>
+<tr>
+<th>Length</th>
+<th>MinVer</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16*u32</td>
+<td></td>
+<td>Stance with each player, 0 = allied, 1 = neutral, 3 = enemy</td>
+</tr>
+</tbody>
+</table>
+<h4 id="disables">Disables</h4>
+<table>
+<thead>
+<tr>
+<th>Length</th>
+<th>MinVer</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16*u32</td>
+<td></td>
+<td>Per-player, number of disabled techs</td>
+</tr>
+<tr>
+<td>16*120</td>
+<td></td>
+<td>Per-player, Disabled technology IDs (30*u32)</td>
+</tr>
+<tr>
+<td>16*120</td>
+<td>1.30</td>
+<td>Per-player, Extra disabled technologies (30*u32)</td>
+</tr>
+<tr>
+<td>16*u32</td>
+<td></td>
+<td>Per-player, number of disabled units</td>
+</tr>
+<tr>
+<td>16*120</td>
+<td></td>
+<td>Per-player, Disabled unit IDs (30*u32)</td>
+</tr>
+<tr>
+<td>16*120</td>
+<td>1.30</td>
+<td>Per-player, Extra disabled units (30*u32)</td>
+</tr>
+<tr>
+<td>16*u32</td>
+<td></td>
+<td>Per-player, number of disabled buildings</td>
+</tr>
+<tr>
+<td>16*80</td>
+<td></td>
+<td>Per-player, Disabled building IDs (20*u32)</td>
+</tr>
+<tr>
+<td>16*160</td>
+<td>1.30</td>
+<td>Per-player, Extra disabled buildings (40*u32)</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Unused = 0</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Unused = 0</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Boolean: all techs?</td>
+</tr>
+<tr>
+<td>16*u32</td>
+<td></td>
+<td>Per-player, starting age. See below. 0-8 Players, 9 - Gaia, 10-16 Unused players</td>
+</tr>
+</tbody>
+</table>
+<h4 id="map">Map</h4>
+<table>
+<thead>
+<tr>
+<th>Length</th>
+<th>MinVer</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Separator, 0xFFFFFF9D</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Player 1 camera, Y</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Player 1 camera, X</td>
+</tr>
+<tr>
+<td>s32</td>
+<td>1.21</td>
+<td>AI Type (see list at bottom)</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Map Width (AOK caps at 256), <strong>W</strong></td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Map Height (AOK caps at 256), <strong>H</strong></td>
+</tr>
+<tr>
+<td><strong>W</strong>*<strong>H</strong>*3</td>
+<td></td>
+<td>Terrain data, see <a href="#struct-terrain">sub-struct</a> below</td>
+</tr>
+</tbody>
+</table>
+<h5 id="struct-terrain">Struct: Terrain</h5>
+<p>Tiles are one dimensional array. There's not any X or Y. It's calculated internal. First tile[X:0, Y:0] starts at leftmost corner and continues at uppest corner of minimap. See <a href="#coords">example image</a> how tiles are readed.</p>
+<table>
+<thead>
+<tr>
+<th>length</th>
+<th>minver</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8</td>
+<td></td>
+<td>terrain id, see list at bottom</td>
+</tr>
+<tr>
+<td>u8</td>
+<td></td>
+<td>elevation</td>
+</tr>
+<tr>
+<td>u8</td>
+<td></td>
+<td>unused = 0</td>
+</tr>
+</tbody>
+</table>
+<h4 id="units-section">Units Section</h4>
+<table>
+<thead>
+<tr>
+<th>length</th>
+<th>minver</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32</td>
+<td></td>
+<td>number of unit sections. I've always seen = 9. <strong>P</strong></td>
+</tr>
+<tr>
+<td>8*28</td>
+<td></td>
+<td>Player Data 4, see <a href="#struct-player-data-4">sub-struct</a> below</td>
+</tr>
+<tr>
+<td><strong>P</strong>*var</td>
+<td></td>
+<td>Player Units, see <a href="#struct-player-units">sub-struct</a> below. GAIA units come first.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="struct-player-data-4">Struct: Player Data 4</h5>
+<table>
+<thead>
+<tr>
+<th>length</th>
+<th>minver</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f32</td>
+<td></td>
+<td>Food, duplicate</td>
+</tr>
+<tr>
+<td>f32</td>
+<td></td>
+<td>Wood, duplicate</td>
+</tr>
+<tr>
+<td>f32</td>
+<td></td>
+<td>Gold, duplicate</td>
+</tr>
+<tr>
+<td>f32</td>
+<td></td>
+<td>Stone, duplicate</td>
+</tr>
+<tr>
+<td>f32</td>
+<td></td>
+<td>"Ore X", duplicate</td>
+</tr>
+<tr>
+<td>f32</td>
+<td></td>
+<td>Padding = 0.0. Not in SW:GB.</td>
+</tr>
+<tr>
+<td>f32</td>
+<td>1.21</td>
+<td>Population limit</td>
+</tr>
+</tbody>
+</table>
+<h5 id="struct-player-units">Struct: Player Units</h5>
+<table>
+<thead>
+<tr>
+<th>length</th>
+<th>minver</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Unit count, <strong>N</strong></td>
+</tr>
+<tr>
+<td><strong>N</strong>*29</td>
+<td></td>
+<td>Units, see <a href="#struct-unit">sub-struct</a> below</td>
+</tr>
+</tbody>
+</table>
+<h5 id="struct-unit">Struct: Unit</h5>
+<table>
+<thead>
+<tr>
+<th>length</th>
+<th>minver</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f32</td>
+<td></td>
+<td>X position</td>
+</tr>
+<tr>
+<td>f32</td>
+<td></td>
+<td>Y position</td>
+</tr>
+<tr>
+<td>f32</td>
+<td></td>
+<td>Unknown = 2</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>ID (for triggers, etc.)</td>
+</tr>
+<tr>
+<td>u16</td>
+<td></td>
+<td>Unit "constant", e.g. Archer, Man-at-arms</td>
+</tr>
+<tr>
+<td>u8</td>
+<td></td>
+<td>Unknown = 2</td>
+</tr>
+<tr>
+<td>f32</td>
+<td></td>
+<td>Rotation, in radians</td>
+</tr>
+<tr>
+<td>u16</td>
+<td></td>
+<td>Initial animation frame</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Garrisonned in ID</td>
+</tr>
+</tbody>
+</table>
+<h4 id="player-data-3">Player Data 3</h4>
+<table>
+<thead>
+<tr>
+<th>length</th>
+<th>minver</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Number of players? Always = 9</td>
+</tr>
+<tr>
+<td>8*64</td>
+<td></td>
+<td>Player Data 3, per player. See <a href="#struct-player-data-3">sub-struct</a> below.</td>
+</tr>
+<tr>
+<td>f64</td>
+<td></td>
+<td>Unknown = 1.6</td>
+</tr>
+</tbody>
+</table>
+<h5 id="struct-player-data-3">Struct: Player Data 3</h5>
+<table>
+<thead>
+<tr>
+<th>length</th>
+<th>minver</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>str16</td>
+<td></td>
+<td>Constant name, like "Player 1"</td>
+</tr>
+<tr>
+<td>f32</td>
+<td></td>
+<td>Initial Camera, X (for Player 1 = editor camera)</td>
+</tr>
+<tr>
+<td>f32</td>
+<td></td>
+<td>Initial Camera, Y</td>
+</tr>
+<tr>
+<td>s16</td>
+<td></td>
+<td>Unknown, similar to camera X</td>
+</tr>
+<tr>
+<td>s16</td>
+<td></td>
+<td>Unknown, similar to camera Y</td>
+</tr>
+<tr>
+<td>u8</td>
+<td></td>
+<td>Boolean: Allied Victory (AOK reads this one)</td>
+</tr>
+<tr>
+<td>u16</td>
+<td></td>
+<td>Player count for diplomacy, <strong>P</strong></td>
+</tr>
+<tr>
+<td><strong>P</strong>*u8</td>
+<td></td>
+<td>Diplomacy: 0 = allied, 1 = neutral, 2 = ?, 3 = enemy</td>
+</tr>
+<tr>
+<td><strong>P</strong>*u32</td>
+<td></td>
+<td>Diplomacy: 0=GAIA, 1=self, 2=allied, 3=neutral, 4=enemy</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Color, see values below</td>
+</tr>
+<tr>
+<td>f32</td>
+<td></td>
+<td>Unknown, affects below items</td>
+</tr>
+<tr>
+<td>u16</td>
+<td></td>
+<td>Unknown, <strong>DAT</strong></td>
+</tr>
+<tr>
+<td>8*u8</td>
+<td></td>
+<td>Only included if above f32 value == 2.0</td>
+</tr>
+<tr>
+<td><strong>DAT</strong>*44</td>
+<td></td>
+<td>Unknown structure, found in Grand Theft Empires</td>
+</tr>
+<tr>
+<td>7*u8</td>
+<td></td>
+<td>Usually 0</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Seems to be 0 if Unknown == 1.0, -1 if Unknown == 2.0</td>
+</tr>
+</tbody>
+</table>
+<h4 id="triggers-section">Triggers Section</h4>
+<table>
+<thead>
+<tr>
+<th>length</th>
+<th>minver</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s8</td>
+<td></td>
+<td>Unknown == 0</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Number of triggers = 0, <strong>T</strong></td>
+</tr>
+<tr>
+<td><strong>T</strong>*var</td>
+<td></td>
+<td>Trigger data, see <a href="#structure-trigger">sub-struct</a> below</td>
+</tr>
+<tr>
+<td><strong>T</strong>*u32</td>
+<td></td>
+<td>Trigger display order array</td>
+</tr>
+</tbody>
+</table>
+<h5 id="structure-trigger">Structure: Trigger</h5>
+<table>
+<thead>
+<tr>
+<th>length</th>
+<th>minver</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Boolean: enabled?</td>
+</tr>
+<tr>
+<td>s8</td>
+<td></td>
+<td>Boolean: looping?</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>String Table ID = -1</td>
+</tr>
+<tr>
+<td>u8</td>
+<td></td>
+<td>Boolean: objective?</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Description order (in objectives)</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Trigger starting time</td>
+</tr>
+<tr>
+<td>str32</td>
+<td></td>
+<td>Trigger description</td>
+</tr>
+<tr>
+<td>str32</td>
+<td></td>
+<td>Trigger name (max 44 characters in UI)</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Number of effects = <strong>E</strong></td>
+</tr>
+<tr>
+<td><strong>E</strong>*var</td>
+<td></td>
+<td>Effect data, see <a href="#structure-effect">sub-struct</a> below</td>
+</tr>
+<tr>
+<td><strong>E</strong>*s32</td>
+<td></td>
+<td>Effect display order array</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Number of conditions = <strong>C</strong></td>
+</tr>
+<tr>
+<td><strong>C</strong>*var</td>
+<td></td>
+<td>Condition data, see <a href="#structure-condition">sub-struct</a> below</td>
+</tr>
+<tr>
+<td><strong>C</strong>*s32</td>
+<td></td>
+<td>Condition display order array</td>
+</tr>
+</tbody>
+</table>
+<h5 id="structure-effect">Structure: Effect</h5>
+<table>
+<thead>
+<tr>
+<th>length</th>
+<th>minver</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Effect type</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Check, always = 0x17</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>AI script goal</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Amount, used for hp and attack</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Resource type</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Diplomacy, state for change</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>N.o. units selected = <strong>N</strong></td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Unit ID</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Unit Name</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Player Source</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Player Target</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Technology</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>String ID</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Sound resource ID</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Display Time (display instructions)</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Trigger ID (activate/deactivate)</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Location X</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Location Y</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Area 1 X</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Area 1 Y</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Area 2 X</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Area 2 Y</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Unit Group</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Unit Type (Civilian, Military, Building, Other)</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Instruction Panel</td>
+</tr>
+<tr>
+<td>str32</td>
+<td></td>
+<td>Instruction Text</td>
+</tr>
+<tr>
+<td>str32</td>
+<td></td>
+<td>Sound filename</td>
+</tr>
+<tr>
+<td>s32<strong>*N</strong></td>
+<td></td>
+<td>Selected units IDs</td>
+</tr>
+</tbody>
+</table>
+<h5 id="structure-condition">Structure: Condition</h5>
+<table>
+<thead>
+<tr>
+<th>length</th>
+<th>minver</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Condition Type</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Check, always = 0x10</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Amount (of Object, Diffculty)</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Resource Type</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Unit object</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Unit ID</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Unit Name</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Player</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Technology</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Timer</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Unknown</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Area 1 X</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Area 1 Y</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Area 2 X</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>Area 2 Y</td>
+</tr>
+<tr>
+<td>s32</td>
+<td></td>
+<td>AI Signal</td>
+</tr>
+</tbody>
+</table>
+<h4 id="included-files">Included Files</h4>
+<table>
+<thead>
+<tr>
+<th>length</th>
+<th>minver</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Boolean: files included?</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Boolean: PER File Error, data included?</td>
+</tr>
+<tr>
+<td>396</td>
+<td></td>
+<td>PER File Error, if PER File Error included</td>
+</tr>
+<tr>
+<td>var</td>
+<td></td>
+<td>Included files</td>
+</tr>
+</tbody>
+</table>
+<h4 id="per-file-error">PER File Error</h4>
+<p>This data contains details about the last error occurrence in the PER files. This data is ignored during reading, but is written when saving a scenario with a PER file error. 
+The engine outputs the details on debug mode. The developers must have needed this feature to debug their AI scripting in scenarios. Normally, a dialog box contains a message about the details of the error. I don't see why they needed this; maybe they wanted to see the data in raw binary form.
+<em>-by AOHH</em></p>
+<table>
+<thead>
+<tr>
+<th>length</th>
+<th>minver</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>256</td>
+<td></td>
+<td>Name of corrupted PER File</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Unknown ID (either PER file ID or Player ID)</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Line of error in PER File</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Interruption line in PER File</td>
+</tr>
+<tr>
+<td>124</td>
+<td></td>
+<td>Extracted code from PER File</td>
+</tr>
+<tr>
+<td>u32</td>
+<td></td>
+<td>Error Code</td>
+</tr>
+</tbody>
+</table></div>
+        </div>
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script src="../js/base.js"></script>
+    </body>
+</html>

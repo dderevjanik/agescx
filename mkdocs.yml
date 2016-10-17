@@ -2,7 +2,8 @@ site_name: AgeScx
 site_author: Daniel Derevjanik
 site_description: Project documentation
 site_favicon: favicon.ico
-repo_url: https://github.com/dderevjanik/AgeScx
+site_url: http://dderevjanik.github.io/agescx/
+repo_url: https://github.com/dderevjanik/agescx
 docs_dir: .
 pages:
 - Home: 'index.md'

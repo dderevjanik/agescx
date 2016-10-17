@@ -70,15 +70,15 @@ followed by n bytes (characters). str32 is also used, but more rarely.
 
 ### Uncompressed Header ###
 
-Length | MinVer | Description
--------|--------|----------------------------------------------------
-c4     |        | Version (ASCII): 1.10, 1.18, 1.21
-u32    |        | Length of header (excluding version and self)
-s32    |        | Unknown cosntant = 2
-u32    |        | Timestamp of last save
-str32  |        | Scenario Instructions
-u32    |        | Unknown constant = 0
-u32    |        | Player count (thanks iberico)
+Length | Requires   | Description
+-------|------------|----------------------------------------------------
+c4     |            | Version (ASCII): 1.10, 1.18, 1.21
+u32    |            | Length of header (excluding version and self)
+s32    |            | Savable
+u32    |Savable >= 2| Timestamp of last save
+str32  |            | Scenario Instructions
+u32    |            | Individual Victories Used
+u32    |            | Player count (thanks iberico)
 
 
 ### Compressed DataIt uses Deflate method with *(-MAX_WBITS, for python)*
@@ -92,8 +92,11 @@ f32    |        | Version 2
 16*256 |        | ASCII player names
 16*u32 | 1.18   | string table player names
 16*16  |        | Player Data#1 see [sub-struct below](#player-data1)
-u32    |        | Unknown, usually 1
-f32    |        | Unknown, always -1?
+u8     |        | Conquest Mode
+u16    |        | Mission Items Counter = n
+u16    |        | Mission Available
+f32    |        | Mission Timeline
+n*30   |        | Mision Item (each 30 bytes)
 str16  |        | Original filename, created while first scenario save
 
 ##### Player Data#1
@@ -103,7 +106,7 @@ Length | MinVer | Description
 u32    |        | Boolean: Active
 u32    |        | Boolean: Human
 u32    |        | Civilization, see IDs at this document
-u32    |        | Unknown constant = 4
+u32    |        | CTY Mode
 
 #### Messages
 
@@ -136,11 +139,11 @@ str16  |        | ASCII, Loss cinematic filename
 Length | MinVer | Description
 -------|--------|----------------------------------------------------
 str16  |        | ASCII, Background filename
-u32    |        | Boolean: Bitmap included
+u32    |        | Picture Version
 u32    |        | Bitmap width
 s32    |        | Bitmap height
-s16    |        | **Include**, -1 if there's a bitmap, 1 otherwise, 2 exists before
-40+SIZE|        | [BITMAPINFOHEADER](#bitmap-info-header) (if Unknown is -1 or 2)
+s16    |        | Picture Orientation
+40+SIZE|        | [BITMAPINFOHEADER](#bitmap-info-header) (if width >= 0 && height >= 0)
 
 #### Bitmap Info Header
 
@@ -192,7 +195,7 @@ u32    |        | Wood
 u32    |        | Food
 u32    |        | Stone
 u32    |        | "Ore X", not used in AOK
-u32    |        | padding, always 0
+u32    |        | Trade Goods
 
 #### Global Victory
 
@@ -200,11 +203,11 @@ Length | MinVer | Description
 -------|--------|----------------------------------------------------
 u32    |        | Separator, 0xFFFFFF9D
 u32    |        | Boolean: conquest required? (for custom vict)
-u32    |        | Unused = 0
-u32    |        | Number of relics required
-u32    |        | Unused = 0
+u32    |        | Ruins
+u32    |        | Artifacts
+u32    |        | Discovery
 u32    |        | Explored % of map required
-u32    |        | Unused = 0
+u32    |        | Gold
 u32    |        | Boolean: all custom conditions required?
 u32    |        | Mode, see below
 u32    |        | Required score for score victory
@@ -212,12 +215,12 @@ u32    |        | Time for timed game, in 10ths of a year (eg, 100 = 10yr)
 
 #### Diplomacy
 
-Length | MinVer | Description
--------|--------|----------------------------------------------------
-16*64  |        | Per-player diplomacy, see [sub-struct](#struct-diplomacy-per-player) below
-11520  |        | Unused, always 0. Yes, that's 11520 bytes.
-u32    |        | Separator, 0xFFFFFF9D (why here??)
-16*u32 |        | Boolean: Allied vict, per-player. Ignored (see PData3). Thanks iberico.
+Length  | MinVer | Description
+--------|--------|----------------------------------------------------
+16*64   |        | Per-player diplomacy, see [sub-struct](#struct-diplomacy-per-player) below
+16*12*60|        | Individual Victories (12 Conditions per 16 Players)
+u32     |        | Separator, 0xFFFFFF9D
+16*u32  |        | Boolean: Allied vict, per-player. Ignored (see PData3). Thanks iberico.
 
 ##### Struct: Diplomacy Per-player
 
@@ -238,9 +241,9 @@ Length | MinVer | Description
 16*u32 |        | Per-player, number of disabled buildings
 16*80  |        | Per-player, Disabled building IDs (20*u32)
 16*160 | 1.30   | Per-player, Extra disabled buildings (40*u32)
-u32    |        | Unused = 0
-u32    |        | Unused = 0
-u32    |        | Boolean: all techs?
+u32    |        | Combat Mode
+u32    |        | Naval Mode
+u32    |        | Boolean: all techs
 16*u32 |        | Per-player, starting age. See below. 0-8 Players, 9 - Gaia, 10-16 Unused players
 
 #### Map
@@ -282,7 +285,7 @@ f32    |        | Wood, duplicate
 f32    |        | Gold, duplicate
 f32    |        | Stone, duplicate
 f32    |        | "Ore X", duplicate
-f32    |        | Padding = 0.0. Not in SW:GB.
+f32    |        | Trade Goods Not in SW:GB.
 f32    | 1.21   | Population limit
 
 ##### Struct: Player Units
@@ -298,10 +301,10 @@ length | minver | description
 -------|--------|----------------------------------------------------
 f32    |        | X position
 f32    |        | Y position
-f32    |        | Unknown = 2
+f32    |        | Z position
 u32    |        | ID (for triggers, etc.)
 u16    |        | Unit "constant", e.g. Archer, Man-at-arms
-u8     |        | Unknown = 2
+u8     |        | Status = 2
 f32    |        | Rotation, in radians
 u16    |        | Initial animation frame
 u32    |        | Garrisonned in ID
@@ -312,7 +315,7 @@ length | minver | description
 -------|--------|----------------------------------------------------
 u32    |        | Number of players? Always = 9
 8*64   |        | Player Data 3, per player. See [sub-struct](#struct-player-data-3) below.
-f64    |        | Unknown = 1.6
+f64    |        | Trigger Version = 1.6
 
 ##### Struct: Player Data 3
 
@@ -325,10 +328,10 @@ s16       |        | Unknown, similar to camera X
 s16       |        | Unknown, similar to camera Y
 u8        |        | Boolean: Allied Victory (AOK reads this one)
 u16       |        | Player count for diplomacy, **P**
-**P***u8  |        | Diplomacy: 0 = allied, 1 = neutral, 2 = ?, 3 = enemy
-**P***u32 |        | Diplomacy: 0=GAIA, 1=self, 2=allied, 3=neutral, 4=enemy
+**P***u8  |        | Diplomacy for interaction: 0 = allied, 1 = neutral, 2 = ?, 3 = enemy
+9*u32     |        | Diplomacy for AI system: 0=GAIA, 1=self, 2=allied, 3=neutral, 4=enemy
 u32       |        | Color, see values below
-f32       |        | Unknown, affects below items
+f32       |        | Victory Version, TODO: below are Victory conditions and effects (need to clarify these structures):
 u16       |        | Unknown, **DAT**
 8*u8      |        | Only included if above f32 value == 2.0
 **DAT***44|        | Unknown structure, found in Grand Theft Empires
@@ -339,7 +342,7 @@ s32       |        | Seems to be 0 if Unknown == 1.0, -1 if Unknown == 2.0
 
 length     | minver | description
 -----------|--------|----------------------------------------------------
-s8         |        | Unknown == 0
+s8         |        | Trigger instructions start
 s32        |        | Number of triggers = 0, **T**
 **T**\*var |        | Trigger data, see [sub-struct](#structure-trigger) below
 **T**\*u32 |        | Trigger display order array

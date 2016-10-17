@@ -372,7 +372,7 @@ followed by n bytes (characters). str32 is also used, but more rarely.</p>
 <thead>
 <tr>
 <th>Length</th>
-<th>MinVer</th>
+<th>Requires</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -390,11 +390,11 @@ followed by n bytes (characters). str32 is also used, but more rarely.</p>
 <tr>
 <td>s32</td>
 <td></td>
-<td>Unknown cosntant = 2</td>
+<td>Savable</td>
 </tr>
 <tr>
 <td>u32</td>
-<td></td>
+<td>Savable &gt;= 2</td>
 <td>Timestamp of last save</td>
 </tr>
 <tr>
@@ -405,7 +405,7 @@ followed by n bytes (characters). str32 is also used, but more rarely.</p>
 <tr>
 <td>u32</td>
 <td></td>
-<td>Unknown constant = 0</td>
+<td>Individual Victories Used</td>
 </tr>
 <tr>
 <td>u32</td>
@@ -451,14 +451,29 @@ followed by n bytes (characters). str32 is also used, but more rarely.</p>
 <td>Player Data#1 see <a href="#player-data1">sub-struct below</a></td>
 </tr>
 <tr>
-<td>u32</td>
+<td>u8</td>
 <td></td>
-<td>Unknown, usually 1</td>
+<td>Conquest Mode</td>
+</tr>
+<tr>
+<td>u16</td>
+<td></td>
+<td>Mission Items Counter = n</td>
+</tr>
+<tr>
+<td>u16</td>
+<td></td>
+<td>Mission Available</td>
 </tr>
 <tr>
 <td>f32</td>
 <td></td>
-<td>Unknown, always -1?</td>
+<td>Mission Timeline</td>
+</tr>
+<tr>
+<td>n*30</td>
+<td></td>
+<td>Mision Item (each 30 bytes)</td>
 </tr>
 <tr>
 <td>str16</td>
@@ -495,7 +510,7 @@ followed by n bytes (characters). str32 is also used, but more rarely.</p>
 <tr>
 <td>u32</td>
 <td></td>
-<td>Unknown constant = 4</td>
+<td>CTY Mode</td>
 </tr>
 </tbody>
 </table>
@@ -621,7 +636,7 @@ followed by n bytes (characters). str32 is also used, but more rarely.</p>
 <tr>
 <td>u32</td>
 <td></td>
-<td>Boolean: Bitmap included</td>
+<td>Picture Version</td>
 </tr>
 <tr>
 <td>u32</td>
@@ -636,12 +651,12 @@ followed by n bytes (characters). str32 is also used, but more rarely.</p>
 <tr>
 <td>s16</td>
 <td></td>
-<td><strong>Include</strong>, -1 if there's a bitmap, 1 otherwise, 2 exists before</td>
+<td>Picture Orientation</td>
 </tr>
 <tr>
 <td>40+SIZE</td>
 <td></td>
-<td><a href="#bitmap-info-header">BITMAPINFOHEADER</a> (if Unknown is -1 or 2)</td>
+<td><a href="#bitmap-info-header">BITMAPINFOHEADER</a> (if width &gt;= 0 &amp;&amp; height &gt;= 0)</td>
 </tr>
 </tbody>
 </table>
@@ -831,7 +846,7 @@ Look at this <a href="http://www.herdsoft.com/ti/davincie/davp3xo2.htm">btmp inf
 <tr>
 <td>u32</td>
 <td></td>
-<td>padding, always 0</td>
+<td>Trade Goods</td>
 </tr>
 </tbody>
 </table>
@@ -858,17 +873,17 @@ Look at this <a href="http://www.herdsoft.com/ti/davincie/davp3xo2.htm">btmp inf
 <tr>
 <td>u32</td>
 <td></td>
-<td>Unused = 0</td>
+<td>Ruins</td>
 </tr>
 <tr>
 <td>u32</td>
 <td></td>
-<td>Number of relics required</td>
+<td>Artifacts</td>
 </tr>
 <tr>
 <td>u32</td>
 <td></td>
-<td>Unused = 0</td>
+<td>Discovery</td>
 </tr>
 <tr>
 <td>u32</td>
@@ -878,7 +893,7 @@ Look at this <a href="http://www.herdsoft.com/ti/davincie/davp3xo2.htm">btmp inf
 <tr>
 <td>u32</td>
 <td></td>
-<td>Unused = 0</td>
+<td>Gold</td>
 </tr>
 <tr>
 <td>u32</td>
@@ -918,14 +933,14 @@ Look at this <a href="http://www.herdsoft.com/ti/davincie/davp3xo2.htm">btmp inf
 <td>Per-player diplomacy, see <a href="#struct-diplomacy-per-player">sub-struct</a> below</td>
 </tr>
 <tr>
-<td>11520</td>
+<td>16<em>12</em>60</td>
 <td></td>
-<td>Unused, always 0. Yes, that's 11520 bytes.</td>
+<td>Individual Victories (12 Conditions per 16 Players)</td>
 </tr>
 <tr>
 <td>u32</td>
 <td></td>
-<td>Separator, 0xFFFFFF9D (why here??)</td>
+<td>Separator, 0xFFFFFF9D</td>
 </tr>
 <tr>
 <td>16*u32</td>
@@ -1009,17 +1024,17 @@ Look at this <a href="http://www.herdsoft.com/ti/davincie/davp3xo2.htm">btmp inf
 <tr>
 <td>u32</td>
 <td></td>
-<td>Unused = 0</td>
+<td>Combat Mode</td>
 </tr>
 <tr>
 <td>u32</td>
 <td></td>
-<td>Unused = 0</td>
+<td>Naval Mode</td>
 </tr>
 <tr>
 <td>u32</td>
 <td></td>
-<td>Boolean: all techs?</td>
+<td>Boolean: all techs</td>
 </tr>
 <tr>
 <td>16*u32</td>
@@ -1168,7 +1183,7 @@ Look at this <a href="http://www.herdsoft.com/ti/davincie/davp3xo2.htm">btmp inf
 <tr>
 <td>f32</td>
 <td></td>
-<td>Padding = 0.0. Not in SW:GB.</td>
+<td>Trade Goods Not in SW:GB.</td>
 </tr>
 <tr>
 <td>f32</td>
@@ -1222,7 +1237,7 @@ Look at this <a href="http://www.herdsoft.com/ti/davincie/davp3xo2.htm">btmp inf
 <tr>
 <td>f32</td>
 <td></td>
-<td>Unknown = 2</td>
+<td>Z position</td>
 </tr>
 <tr>
 <td>u32</td>
@@ -1237,7 +1252,7 @@ Look at this <a href="http://www.herdsoft.com/ti/davincie/davp3xo2.htm">btmp inf
 <tr>
 <td>u8</td>
 <td></td>
-<td>Unknown = 2</td>
+<td>Status = 2</td>
 </tr>
 <tr>
 <td>f32</td>
@@ -1279,7 +1294,7 @@ Look at this <a href="http://www.herdsoft.com/ti/davincie/davp3xo2.htm">btmp inf
 <tr>
 <td>f64</td>
 <td></td>
-<td>Unknown = 1.6</td>
+<td>Trigger Version = 1.6</td>
 </tr>
 </tbody>
 </table>
@@ -1331,12 +1346,12 @@ Look at this <a href="http://www.herdsoft.com/ti/davincie/davp3xo2.htm">btmp inf
 <tr>
 <td><strong>P</strong>*u8</td>
 <td></td>
-<td>Diplomacy: 0 = allied, 1 = neutral, 2 = ?, 3 = enemy</td>
+<td>Diplomacy for interaction: 0 = allied, 1 = neutral, 2 = ?, 3 = enemy</td>
 </tr>
 <tr>
-<td><strong>P</strong>*u32</td>
+<td>9*u32</td>
 <td></td>
-<td>Diplomacy: 0=GAIA, 1=self, 2=allied, 3=neutral, 4=enemy</td>
+<td>Diplomacy for AI system: 0=GAIA, 1=self, 2=allied, 3=neutral, 4=enemy</td>
 </tr>
 <tr>
 <td>u32</td>
@@ -1346,7 +1361,7 @@ Look at this <a href="http://www.herdsoft.com/ti/davincie/davp3xo2.htm">btmp inf
 <tr>
 <td>f32</td>
 <td></td>
-<td>Unknown, affects below items</td>
+<td>Victory Version, TODO: below are Victory conditions and effects (need to clarify these structures):</td>
 </tr>
 <tr>
 <td>u16</td>
@@ -1388,7 +1403,7 @@ Look at this <a href="http://www.herdsoft.com/ti/davincie/davp3xo2.htm">btmp inf
 <tr>
 <td>s8</td>
 <td></td>
-<td>Unknown == 0</td>
+<td>Trigger instructions start</td>
 </tr>
 <tr>
 <td>s32</td>
